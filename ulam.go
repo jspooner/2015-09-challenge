@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+  "math"
 )
 
 func main() {
@@ -10,6 +11,8 @@ func main() {
   squire := flag.Int("d", 3, "3x3 squire")
   flag.Parse()
   fmt.Println( "squire", *squire )
+  center := math.Ceil(float64(*squire)/2.0)
+  fmt.Println( "starting cell", center )
   
   b := make([][]int, *squire)
 
