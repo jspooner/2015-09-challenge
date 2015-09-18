@@ -1,11 +1,15 @@
 package main
 
 import (
-  "fmt"
-  "os"
+	"flag"
+	"fmt"
 )
 
 func main() {
-  // body
-  fmt.Printf( os.Args[1] )
+	// body
+  squire := flag.Int("d", 3, "3x3 squire")
+  flag.Parse()
+  fmt.Println( "squire", *squire )
+  fmt.Println( "tail:", flag.Args() )
+
 }
