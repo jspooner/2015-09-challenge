@@ -12,7 +12,6 @@ func main() {
   fmt.Println( "squire", *squire )
   
   b := make([][]int, *squire)
-  fmt.Println( b )
 
   for i := 0; i < *squire; i++ {
     b[i] = make([]int, *squire)
@@ -20,7 +19,9 @@ func main() {
       b[i][j] = 9
     }
   }
-
-  fmt.Println( b )
+  
+  for i := 0; i < *squire; i++ {
+    fmt.Println( b[i] )
+  }
   
 }
